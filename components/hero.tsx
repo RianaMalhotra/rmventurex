@@ -16,7 +16,7 @@ export function Hero() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          VentureX is an independent desk covering Indian and US-listed companies, with a thematic focus on the
+          RMVentureX is an independent desk covering Indian and US-listed companies, with a thematic focus on the
           India–Canada investment corridor. Deep, data-driven analysis built on 25+ years of institutional capital
           markets experience.
         </p>
