@@ -20,6 +20,7 @@ export default function Page() {
         <FeaturedResearch />
         <Corridor />
         <About />
+        <Pricing />
         <Subscribe />
       </main>
       <SiteFooter />
