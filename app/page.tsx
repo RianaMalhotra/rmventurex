@@ -7,6 +7,7 @@ import { Corridor } from "@/components/corridor"
 import { About } from "@/components/about"
 import { Subscribe } from "@/components/subscribe"
 import { SiteFooter } from "@/components/site-footer"
+import { Pricing } from "@/components/pricing"
 
 export default function Page() {
   return (
