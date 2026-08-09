@@ -7,9 +7,9 @@ export function SiteFooter() {
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div className="max-w-sm">
             <div className="flex items-center gap-2.5">
-              <span className="flex h-7 w-7 items-center justify-center rounded-sm bg-primary text-[13px] font-bold text-primary-foreground">
-                V
-              </span>
+              <span className="flex h-7 items-center justify-center rounded-sm bg-primary px-1.5 text-[13px] font-bold text-primary-foreground">
+  RM
+</span>
               <span className="font-serif text-lg font-semibold tracking-tight text-foreground">
                 Venture<span className="text-accent">X</span>
               </span>
