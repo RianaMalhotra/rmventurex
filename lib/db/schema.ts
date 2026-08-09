@@ -5,5 +5,6 @@ export const subscribers = pgTable("subscribers", {
   email: text("email").notNull().unique(),
   name: text("name"),
   interest: text("interest"),
+  plan: text("plan").notNull().default("standard"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 })
