@@ -16,9 +16,9 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: 'VentureX — Independent Equity Research',
+  title: 'RMVentureX — Independent Equity Research',
   description:
-    'VentureX is an independent equity research desk covering Indian and US-listed companies, with a thematic focus on the India–Canada investment corridor. Deep-dives, sector themes, and contrarian calls for investors who act on research.',
+    'RMVentureX is an independent equity research desk covering Indian and US-listed companies, with a thematic focus on the India–Canada investment corridor. Deep-dives, sector themes, and contrarian calls for investors who act on research.',
   generator: 'v0.app',
   icons: {
     icon: [
