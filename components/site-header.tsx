@@ -14,8 +14,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <Link href="/" className="group flex items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-sm bg-primary text-[13px] font-bold text-primary-foreground">
-            V
+         <span className="flex h-7 items-center justify-center rounded-sm bg-primary px-1.5 text-[13px] font-bold text-primary-foreground">
+            RM
           </span>
           <span className="font-serif text-lg font-semibold tracking-tight text-foreground">
             Venture<span className="text-accent">X</span>
