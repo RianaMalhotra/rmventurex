@@ -105,7 +105,7 @@ export function Subscribe() {
 
                 <SubmitButton />
                 <p className="text-xs leading-relaxed text-muted-foreground">
-                  By subscribing you agree to receive research communications from VentureX. This is not investment
+                  By subscribing you agree to receive research communications from RMVentureX. This is not investment
                   advice.
                 </p>
               </form>
