@@ -15,7 +15,7 @@ export function About() {
 
           <div className="space-y-5 text-pretty leading-relaxed text-muted-foreground">
             <p>
-              RMVentureX is an independent equity research desk. Independent means our analysis answers to the reader, not
+              VentureX is an independent equity research desk. Independent means our analysis answers to the reader, not
               to a banking pipeline, a distribution quota, or an issuer relationship.
             </p>
             <p>
