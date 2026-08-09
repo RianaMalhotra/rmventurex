@@ -45,7 +45,7 @@ export function SiteFooter() {
             <div className="flex flex-col gap-3">
               <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Contact</span>
               <a href="mailto:research@venturex.com" className="text-sm text-foreground hover:text-accent">
-                research@venturex.com
+                rahul.malhotra@rmventurex.com
               </a>
             </div>
           </div>
