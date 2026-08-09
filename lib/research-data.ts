@@ -1,6 +1,7 @@
 export type ResearchKind = "Deep-Dive" | "Sector Theme" | "Contrarian Call"
 
 export type ResearchNote = {
+  slug: string
   ticker: string
   market: "NSE" | "BSE" | "NYSE" | "NASDAQ" | "TSX"
   company: string
@@ -14,6 +15,7 @@ export type ResearchNote = {
 
 export const researchNotes: ResearchNote[] = [
   {
+    slug: "shopify-take-rate-ceiling",
     ticker: "SHOP",
     market: "TSX",
     company: "Shopify Inc.",
@@ -26,6 +28,7 @@ export const researchNotes: ResearchNote[] = [
     rating: "Conviction Buy",
   },
   {
+    slug: "jio-arpu-inflection-retail-listing",
     ticker: "RELIANCE",
     market: "NSE",
     company: "Reliance Industries",
@@ -38,6 +41,7 @@ export const researchNotes: ResearchNote[] = [
     rating: "Accumulate",
   },
   {
+    slug: "trimming-into-consensus-melt-up",
     ticker: "NVDA",
     market: "NASDAQ",
     company: "NVIDIA Corp.",
@@ -50,6 +54,7 @@ export const researchNotes: ResearchNote[] = [
     rating: "Reduce",
   },
   {
+    slug: "india-credit-cycle-private-banks-nbfc",
     ticker: "—",
     market: "NSE",
     company: "India Financials",
@@ -62,6 +67,7 @@ export const researchNotes: ResearchNote[] = [
     rating: "Under Review",
   },
   {
+    slug: "brookfield-carried-interest-flywheel",
     ticker: "BN",
     market: "TSX",
     company: "Brookfield Corp.",
@@ -74,6 +80,7 @@ export const researchNotes: ResearchNote[] = [
     rating: "Accumulate",
   },
   {
+    slug: "corridor-thesis-pension-capital-india-growth",
     ticker: "—",
     market: "TSX",
     company: "India–Canada Corridor",
