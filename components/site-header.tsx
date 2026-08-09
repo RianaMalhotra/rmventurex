@@ -7,6 +7,7 @@ const nav = [
   { label: "Pricing", href: "#pricing" },
   { label: "Approach", href: "#approach" },
   { label: "About", href: "#about" },
+  { label: "Pricing", href: "#pricing" },
 ]
 
 export function SiteHeader() {
