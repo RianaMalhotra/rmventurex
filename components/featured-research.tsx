@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { researchNotes, type ResearchKind } from "@/lib/research-data"
 
@@ -30,8 +31,9 @@ export function FeaturedResearch() {
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {researchNotes.map((note) => (
-            <article
-              key={note.title}
+            <Link
+              key={note.slug}
+              href={`/research/${note.slug}`}
               className="group flex flex-col rounded-sm border border-border bg-card p-6 transition-colors hover:border-accent"
             >
               <div className="flex items-center justify-between gap-3">
@@ -59,7 +61,7 @@ export function FeaturedResearch() {
                 </div>
                 <ArrowUpRight className="size-4 text-muted-foreground transition-colors group-hover:text-accent" />
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>
