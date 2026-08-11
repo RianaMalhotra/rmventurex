@@ -19,7 +19,21 @@ const tiers = [
   },
   {
     name: "Desk+",
-    price: "$159",
+    price: "$199",
+    cadence: "/month",
+    description: "For funds and family offices who want direct access alongside the research.",
+    features: [
+      "Everything in Research",
+      "Quarterly 30-minute call with the desk",
+      "Early access, 24 hours before publish",
+      "Direct email line for follow-ups",
+    ],
+    cta: "Talk to us",
+    featured: false,
+  },
+   {
+    name: "IntelFox",
+    price: "$299",
     cadence: "/month",
     description: "For funds and family offices who want direct access alongside the research.",
     features: [
