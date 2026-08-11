@@ -2,19 +2,10 @@ import { Check } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
-const tiers = [
-  {
-    name: "Free",
-    price: "$0",
-    cadence: "forever",
-    description: "Sample the desk before you commit. Good for readers who want the corridor thesis in their inbox.",
-    features: ["Monthly sector-theme note", "The Corridor thesis roundup", "Public sample deep-dives"],
-    cta: "Join free",
-    featured: false,
-  },
+const tiers =
   {
     name: "Research",
-    price: "$59",
+    price: "$99",
     cadence: "/month",
     description: "The full desk, delivered as it publishes. Built for investors who size positions off primary research.",
     features: [
