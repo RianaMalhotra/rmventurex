@@ -95,7 +95,7 @@ export function Pricing() {
         </div>
 
         <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
-          Prices in USD, billed monthly. Cancel anytime. Nothing here constitutes investment advice.
+          Prices in USD, billed quarterly. Cancel anytime. Nothing here constitutes investment advice.
         </p>
       </div>
     </section>
