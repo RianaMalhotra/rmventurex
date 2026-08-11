@@ -2,7 +2,7 @@ import { Check } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
-const tiers =
+const tiers = [
   {
     name: "Research",
     price: "$99",
