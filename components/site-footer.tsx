@@ -6,12 +6,11 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-5 py-14">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div className="max-w-sm">
-            <div className="flex items-center gap-1.5">
-              <span className="flex h-7 items-center justify-center rounded-sm bg-primary px-1.5 text-[13px] font-bold text-primary-foreground">
-                RM
-              </span>
-              <span className="font-serif text-lg font-semibold tracking-tight text-foreground">
-                Venture<span className="text-accent">X</span>
+            <div className="flex items-center">
+              <span className="font-serif text-lg font-semibold tracking-tight">
+                <span className="text-accent">RM</span>
+                <span className="text-primary">Venture</span>
+                <span className="text-accent">X</span>
               </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
@@ -46,6 +45,8 @@ export function SiteFooter() {
               <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Contact</span>
               <a href="mailto:research@rmventurex.com" className="text-sm text-foreground hover:text-accent">
                 research@rmventurex.com
+                https://www.linkedin.com/in/rahulmalhotrabgold/
+                https://www.youtube.com/@RMVentureX
               </a>
             </div>
           </div>
