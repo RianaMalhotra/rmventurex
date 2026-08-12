@@ -44,9 +44,9 @@ export function SiteFooter() {
             <div className="flex flex-col gap-3">
               <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Contact</span>
               <a href="mailto:research@rmventurex.com" className="text-sm text-foreground hover:text-accent">
-                research@rmventurex.com
-                https://www.linkedin.com/in/rahulmalhotrabgold/
-                https://www.youtube.com/@RMVentureX
+                Email: rahul.malhotra@rmventurex.com
+                Linkedin: www.linkedin.com/in/rahulmalhotrabgold/
+                Youtube: www.youtube.com/@RMVentureX
               </a>
             </div>
           </div>
