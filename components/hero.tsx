@@ -8,7 +8,7 @@ export function Hero() {
       <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
         <div className="flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
           <span className="h-px w-8 bg-accent" aria-hidden />
-          Independent Equity Research
+           AI POWERED INVESTMENT INTELLIGENCE & RESEARCH
         </div>
 
         <h1 className="mt-6 max-w-4xl text-balance font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl">
