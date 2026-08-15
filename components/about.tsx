@@ -15,8 +15,7 @@ export function About() {
 
           <div className="space-y-5 text-pretty leading-relaxed text-muted-foreground">
             <p>
-              RMVentureX is an independent equity research desk. Independent means our analysis answers to the reader, not
-              to a banking pipeline, a distribution quota, or an issuer relationship.
+              RMVentureX pairs AI-driven research with old-fashioned independence. Our models continuously scan filings, price action, and macro data across Indian and US markets to surface signals faster than manual coverage ever could. And because we answer only to the reader — not a banking pipeline, a distribution quota, or an issuer relationship — every signal gets stress-tested by our analysts before it reaches you.
             </p>
             <p>
               The desk is built on 25+ years across institutional capital markets — the kind of experience that teaches
