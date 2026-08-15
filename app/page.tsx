@@ -7,6 +7,7 @@ import { Corridor } from "@/components/corridor"
 import { About } from "@/components/about"
 import { Pricing } from "@/components/pricing"
 import { Subscribe } from "@/components/subscribe"
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { SiteFooter } from "@/components/site-footer"
 
 export default function Page() {
@@ -22,6 +23,7 @@ export default function Page() {
         <About />
         <Pricing />
         <Subscribe />
+        <AnnouncementBanner />
       </main>
       <SiteFooter />
     </div>
