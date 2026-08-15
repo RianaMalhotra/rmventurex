@@ -20,7 +20,6 @@ export function SiteHeader() {
             <span className="text-accent">X</span>
           </span>
         </Link>
-
         <nav className="hidden items-center gap-8 md:flex">
           {nav.map((item) => (
             <Link
@@ -32,8 +31,18 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-
-        <Button size="sm" className="rounded-sm" nativeButton={false} render={<Link href="#subscribe" />}>
+        <Button
+          size="sm"
+          className="rounded-sm"
+          nativeButton={false}
+          render={
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfXQs1DzQvsKH8ZgfrjF1V5zSYOXRT7ChQ3SHQDniczGJddcA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            />
+          }
+        >
           Subscribe
         </Button>
       </div>
