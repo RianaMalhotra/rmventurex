@@ -1,5 +1,5 @@
 // Replace with your form's real link from the "Get the shareable link" step.
-const GOOGLE_FORM_URL = "https://forms.gle/YOUR_FORM_LINK";
+const GOOGLE_FORM_URL = "https://forms.gle/Ea9wAEBd3z249VZy9";
 
 export function Subscribe() {
   return (
