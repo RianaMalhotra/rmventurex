@@ -7,7 +7,7 @@ import { Corridor } from "@/components/corridor"
 import { About } from "@/components/about"
 import { Pricing } from "@/components/pricing"
 import { Subscribe } from "@/components/subscribe"
-import { AnnouncementBanner } from "@/components/AnnouncementBanner";
+import { AnnouncementBanner } from "@/components/announcement-banner"
 import { SiteFooter } from "@/components/site-footer"
 
 export default function Page() {
