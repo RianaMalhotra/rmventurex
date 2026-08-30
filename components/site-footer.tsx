@@ -13,6 +13,7 @@ export function SiteFooter() {
                 <span className="text-accent">X</span>
               </span>
             </div>
+
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Independent equity research covering Indian and US-listed companies, with a thematic focus on the
               India–Canada investment corridor.
@@ -20,65 +21,82 @@ export function SiteFooter() {
           </div>
 
           <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
+            {/* Research */}
             <div className="flex flex-col gap-3">
-              <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Research</span>
+              <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                Research
+              </span>
+
               <Link href="#research" className="text-sm text-foreground hover:text-accent">
                 Selected Notes
               </Link>
+
               <Link href="#approach" className="text-sm text-foreground hover:text-accent">
                 Our Approach
               </Link>
+
               <Link href="#corridor" className="text-sm text-foreground hover:text-accent">
                 The Corridor
               </Link>
             </div>
+
+            {/* Desk */}
             <div className="flex flex-col gap-3">
-              <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Desk</span>
+              <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                Desk
+              </span>
+
               <Link href="#about" className="text-sm text-foreground hover:text-accent">
                 About
               </Link>
+
               <Link href="#subscribe" className="text-sm text-foreground hover:text-accent">
                 Subscribe
               </Link>
             </div>
-           <div className="flex flex-col gap-3">
-  <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-    Contact
-  </span>
 
-  <a
-    href="mailto:rahul.malhotra@rmventurex.com"
-    className="text-sm text-foreground hover:text-accent"
-  >
-    Email
-  </a>
+            {/* Contact */}
+            <div className="flex flex-col gap-3">
+              <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                Contact
+              </span>
 
-  <a
-    href="https://www.linkedin.com/in/rahulmalhotrabgold/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-sm text-foreground hover:text-accent"
-  >
-    LinkedIn
-  </a>
+              <a
+                href="mailto:rahul.malhotra@rmventurex.com"
+                className="text-sm text-foreground hover:text-accent"
+              >
+                Email
+              </a>
 
-  <a
-    href="https://www.youtube.com/@RMVentureX"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-sm text-foreground hover:text-accent"
-  >
-    YouTube
-  </a>
-</div>
+              <a
+                href="https://www.linkedin.com/in/rahulmalhotrabgold/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-foreground hover:text-accent"
+              >
+                LinkedIn
+              </a>
 
-        <div className="mt-12 border-t border-border pt-6">
-          <p className="text-xs leading-relaxed text-muted-foreground">
-            © {new Date().getFullYear()} RMVentureX Research. For informational purposes only. Nothing on this site
-            constitutes investment advice, an offer, or a solicitation to buy or sell any security. Company names,
-            tickers, ratings, and figures shown are illustrative samples. Past performance is not indicative of future
-            results.
-          </p>
+              <a
+                href="https://www.youtube.com/@RMVentureX"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-foreground hover:text-accent"
+              >
+                YouTube
+              </a>
+            </div>
+          </div>
+
+          {/* Copyright / Disclaimer */}
+          <div className="mt-12 border-t border-border pt-6">
+            <p className="text-xs leading-relaxed text-muted-foreground">
+              © {new Date().getFullYear()} RMVentureX Research. For informational purposes only. Nothing on this site
+              constitutes investment advice, an offer, or a solicitation to buy or sell any security. Company names,
+              tickers, ratings, and figures shown are illustrative samples. Past performance is not indicative of future
+              results.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
