@@ -41,16 +41,36 @@ export function SiteFooter() {
                 Subscribe
               </Link>
             </div>
-            <div className="flex flex-col gap-3">
-              <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Contact</span>
-              <a href="mailto:research@rmventurex.com" className="text-sm text-foreground hover:text-accent">
-                "Email: rahul.malhotra@rmventurex.com",
-                "Linkedin: www.linkedin.com/in/rahulmalhotrabgold/",
-                "Youtube: www.youtube.com/@RMVentureX",
-              </a>
-            </div>
-          </div>
-        </div>
+           <div className="flex flex-col gap-3">
+  <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+    Contact
+  </span>
+
+  <a
+    href="mailto:rahul.malhotra@rmventurex.com"
+    className="text-sm text-foreground hover:text-accent"
+  >
+    Email
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/rahulmalhotrabgold/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sm text-foreground hover:text-accent"
+  >
+    LinkedIn
+  </a>
+
+  <a
+    href="https://www.youtube.com/@RMVentureX"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sm text-foreground hover:text-accent"
+  >
+    YouTube
+  </a>
+</div>
 
         <div className="mt-12 border-t border-border pt-6">
           <p className="text-xs leading-relaxed text-muted-foreground">
