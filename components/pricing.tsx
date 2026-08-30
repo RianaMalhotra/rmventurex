@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 const tiers = [
   {
     name: "Research",
-    price: "$99",
+    price: "$199",
     cadence: "/month",
     description: "The full desk, delivered as it publishes. Built for investors who size positions off primary research.",
     features: [
@@ -13,13 +13,14 @@ const tiers = [
       "Full rating history and conviction changes",
       "Priority email delivery",
       "Archive access to past notes",
+      "Please call for details",
     ],
     cta: "Subscribe to Research",
     featured: true,
   },
   {
     name: "Desk+",
-    price: "$199",
+    price: "$399",
     cadence: "/month",
     description: "For funds and family offices who want direct access alongside the research.",
     features: [
@@ -27,13 +28,14 @@ const tiers = [
       "Quarterly 30-minute call with the desk",
       "Early access, 24 hours before publish",
       "Direct email line for follow-ups",
+      "Please call for details",
     ],
     cta: "Talk to us",
     featured: false,
   },
    {
     name: "IntelFox Global",
-    price: "$299",
+    price: "$999",
     cadence: "/month",
     description: "For funds and family offices who want direct access alongside the research.",
     features: [
@@ -43,6 +45,7 @@ const tiers = [
 "Customized intelligence and research",
 "Advanced risk assessment & analysis",
 "Tailored insights for investment decisions",
+      "Please call for details",
 ],
     cta: "Talk to us",
     featured: false,
