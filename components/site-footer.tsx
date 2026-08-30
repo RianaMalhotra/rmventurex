@@ -96,7 +96,7 @@ export function SiteFooter() {
                 href="tel:+16473542369"
                 className="text-sm text-foreground hover:text-accent"
               >
-                +1 (647) 354-2369
+                Call: +1 (647) 354-2369
               </a>
 
               {/* LinkedIn */}
