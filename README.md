@@ -1,33 +1,119 @@
-# rmventurex
+# RMVentureX
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+**AI-Powered Investment Intelligence & Research**
 
-## Built with v0
+[Live Website](https://www.rmventurex.com/)
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+RMVentureX is a modern investment research platform focused on delivering structured, data-driven equity research across Indian and US markets. The platform combines AI-powered analysis with analyst-driven research to surface investment signals, company insights, sector themes, and contrarian perspectives.
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_FKlwIRYDbO3VJZy6b1BV15lvMkqo)
+## Overview
 
-## Getting Started
+The platform is designed around three core research formats:
 
-First, run the development server:
+* **Company Deep-Dives** — Detailed analysis of business fundamentals, unit economics, capital allocation, and key valuation drivers.
+* **Sector Themes** — Cross-sectional analysis comparing companies within emerging sectors and investment themes.
+* **Contrarian Calls** — Research identifying situations where fundamental analysis differs from prevailing market consensus.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+RMVentureX also focuses on the **India–Canada investment corridor**, analyzing capital flows, cross-listed companies, institutional investment, and businesses exposed to both markets.
+
+## Features
+
+* Modern responsive investment research interface
+* Structured research-note presentation
+* Company and sector research pages
+* Investment thesis and rating presentation
+* Market ticker and financial-data UI
+* Subscription and newsletter flows
+* Responsive navigation and content sections
+* India and US market coverage
+* Thematic investment research
+
+## Tech Stack
+
+**Frontend**
+
+* HTML
+* CSS
+* JavaScript
+
+**Design & UI**
+
+* Responsive web design
+* Component-based UI patterns
+* Interactive navigation
+* Financial-data visualization
+
+**Deployment**
+
+* Custom domain: `rmventurex.com`
+
+## Site Architecture
+
+```text
+RMVentureX
+├── Home
+│   ├── Market Ticker
+│   ├── Hero / Research Overview
+│   ├── Research Formats
+│   ├── Selected Notes
+│   ├── India–Canada Corridor
+│   ├── About the Desk
+│   ├── Pricing
+│   └── Newsletter
+│
+├── Research
+│   ├── Company Deep-Dives
+│   ├── Sector Themes
+│   └── Contrarian Calls
+│
+├── Selected Notes
+│   ├── Shopify
+│   ├── Reliance
+│   ├── NVIDIA
+│   ├── Indian Credit Cycle
+│   └── Brookfield
+│
+└── Subscription
+    ├── Research
+    ├── Desk+
+    └── IntelFox Global
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Research Coverage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+RMVentureX covers:
 
-## Learn More
+* 🇮🇳 Indian-listed companies
+* 🇺🇸 US-listed companies
+* 🇨🇦 Canadian-listed companies
+* Cross-listed and dual-exposure companies
+* Sector and thematic opportunities
+* India–Canada capital flows
 
-To learn more, take a look at the following resources:
+## India–Canada Investment Corridor
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+A central theme of the platform is the relationship between Canadian institutional capital and Indian growth markets.
+
+The research examines:
+
+1. Canadian pension and institutional investment in India
+2. Cross-listed and dual-exposure companies
+3. Capital flows between the two markets
+4. Listed companies positioned to benefit from these flows
+
+## Disclaimer
+
+RMVentureX is an independent research platform. Content published on the website is provided for informational purposes only and does not constitute investment advice, an offer, or a solicitation to buy or sell securities.
+
+---
+
+## Live Demo
+
+**https://www.rmventurex.com/**
+
+## Author
+
+**RMVentureX Research**
+
+© 2026 RMVentureX Research
+Created by Riana Malhotra
