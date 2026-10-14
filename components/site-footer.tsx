@@ -11,10 +11,10 @@ export function SiteFooter() {
           {/* Brand / Description */}
           <div className="max-w-md">
             <div className="flex items-center">
-              <span className="font-serif text-lg font-semibold tracking-tight">
-                <span className="text-accent">RM</span>
-                <span className="text-primary">Venture</span>
-                <span className="text-accent">X</span>
+              <span className="inline-flex items-center rounded-md border border-[#d8b76a]/70 bg-[#071a31] px-3 py-1.5 font-serif text-lg font-semibold tracking-tight shadow-[0_0_0_1px_rgba(59,130,246,0.18),0_0_14px_rgba(216,183,106,0.16)] transition-all duration-300 hover:border-[#f1cd82] hover:shadow-[0_0_0_1px_rgba(96,165,250,0.35),0_0_20px_rgba(216,183,106,0.28)]">
+                <span className="text-[#f1cd82]">RM</span>
+                <span className="text-[#75b9ff]">Venture</span>
+                <span className="text-[#f1cd82]">X</span>
               </span>
             </div>
 
