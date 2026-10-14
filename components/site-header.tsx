@@ -33,11 +33,11 @@ export function SiteHeader() {
         </nav>
         <Button
           size="sm"
-          className="rounded-sm"
+          className="group rounded-md border border-[#f3d28d]/60 bg-gradient-to-r from-[#d5a64e] via-[#f1cd82] to-[#c9983d] px-5 font-semibold text-[#071427] shadow-[0_3px_16px_rgba(218,169,77,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:from-[#f1cd82] hover:via-[#ffe4a4] hover:to-[#e2b35c] hover:shadow-[0_6px_24px_rgba(218,169,77,0.45)] focus-visible:ring-2 focus-visible:ring-[#f1cd82] focus-visible:ring-offset-2 focus-visible:ring-offset-[#071427]"
           nativeButton={false}
           render={<Link href="/#subscribe" />}
         >
-          Subscribe
+          Subscribe <span aria-hidden="true" className="ml-1 inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
         </Button>
       </div>
     </header>
