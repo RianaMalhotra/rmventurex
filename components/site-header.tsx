@@ -2,11 +2,11 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 const nav = [
-  { label: "Approach", href: "#approach" },
-  { label: "Research", href: "#research" },
-  { label: "The Corridor", href: "#corridor" },
-  { label: "About", href: "#about" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Approach", href: "/#approach" },
+  { label: "Research", href: "/#research" },
+  { label: "The Corridor", href: "/#corridor" },
+  { label: "About", href: "/#about" },
+  { label: "Pricing", href: "/#pricing" },
 ]
 
 export function SiteHeader() {
