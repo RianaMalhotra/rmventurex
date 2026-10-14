@@ -1,7 +1,53 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+const rotatingPhrases = [
+  "AI-powered insights.",
+  "Independent thinking.",
+  "Conviction-led research.",
+  "Signals beyond the noise.",
+]
+
+function TypedInsight() {
+  const [phraseIndex, setPhraseIndex] = useState(0)
+  const [characterCount, setCharacterCount] = useState(0)
+  const [deleting, setDeleting] = useState(false)
+
+  useEffect(() => {
+    const phrase = rotatingPhrases[phraseIndex]
+    const finishedTyping = characterCount === phrase.length
+    const finishedDeleting = characterCount === 0 && deleting
+    const delay = finishedTyping && !deleting ? 1800 : finishedDeleting ? 250 : deleting ? 38 : 75
+
+    const timer = window.setTimeout(() => {
+      if (finishedTyping && !deleting) {
+        setDeleting(true)
+      } else if (finishedDeleting) {
+        setDeleting(false)
+        setPhraseIndex((index) => (index + 1) % rotatingPhrases.length)
+      } else {
+        setCharacterCount((count) => count + (deleting ? -1 : 1))
+      }
+    }, delay)
+
+    return () => window.clearTimeout(timer)
+  }, [phraseIndex, characterCount, deleting])
+
+  return (
+    <div className="mt-6 flex min-h-8 items-center gap-2 text-sm font-medium tracking-wide text-accent sm:text-base" aria-label="AI-powered insights. Independent thinking. Conviction-led research. Signals beyond the noise.">
+      <span aria-hidden="true" className="uppercase tracking-[0.12em] text-muted-foreground">Built for</span>
+      <span aria-hidden="true" className="inline-flex items-center">
+        {rotatingPhrases[phraseIndex].slice(0, characterCount)}
+        <span className="ml-0.5 inline-block h-[1.1em] w-[2px] animate-pulse bg-accent" />
+      </span>
+    </div>
+  )
+}
 
 export function Hero() {
   return (
@@ -21,6 +67,8 @@ export function Hero() {
           Our models continuously scan filings, price action, and macro data across Indian and US markets to surface signals human analysts would take days to find.
           Our team stress-tests every call before it reaches you. The result is research that moves at the speed of AI, with the judgment of 25+ years in capital markets behind it.
         </p>
+
+        <TypedInsight />
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Button size="lg" className="rounded-md" nativeButton={false} render={<Link href="#subscribe" />}>
