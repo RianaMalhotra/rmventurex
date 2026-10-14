@@ -40,7 +40,7 @@ export function Hero() {
 
         <div className="relative mt-14 h-44 overflow-hidden rounded-lg border border-border sm:h-56 md:h-72">
           <Image
-            src="/images/nyc-skyline.svg"
+            src="/images/nyc-skyline.png"
             alt="New York City skyline representing US equity market coverage"
             fill
             sizes="(min-width: 1152px) 1152px, 100vw"
