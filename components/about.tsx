@@ -1,63 +1,66 @@
+import Image from "next/image"
 import { BarChart3, UsersRound, FileText } from "lucide-react"
 
-const pillars = [
+const details = [
   {
     icon: BarChart3,
-    label: "AI-powered intelligence",
     copy: "RMVentureX pairs AI-driven research with old-fashioned independence. Our models continuously scan filings, price action, and macro data across Indian and US markets to surface signals faster than manual coverage ever could. And because we answer only to the reader — not a banking pipeline, a distribution quota, or an issuer relationship — every signal gets stress-tested by our analysts before it reaches you.",
   },
   {
     icon: UsersRound,
-    label: "Institutional experience",
     copy: "The desk is built on 25+ years across institutional capital markets — the kind of experience that teaches you the difference between a story stock and a business, and why the two so often trade as if they were the same thing.",
   },
   {
     icon: FileText,
-    label: "Research with conviction",
     copy: "We publish for investors who want to understand a position before they take it: the thesis, the risks, the rating, and the reason we could be wrong. Everything is sourced, dated, and stands on its own.",
   },
 ]
 
 export function About() {
   return (
-    <section id="about" className="relative isolate overflow-hidden border-b border-border bg-[#071424]">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_65%,rgba(195,145,66,0.14),transparent_42%),radial-gradient(ellipse_at_85%_10%,rgba(48,87,141,0.16),transparent_50%)]" />
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-[0.045] [background-image:linear-gradient(135deg,transparent_47%,#d6b06a_50%,transparent_53%)] [background-size:20px_20px]" />
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:py-28">
-        <div className="relative flex flex-col justify-between">
-          <div>
-            <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-foreground/80">
-              <span className="h-px w-10 bg-accent" aria-hidden="true" />
+    <section id="about" className="relative isolate overflow-hidden border-b border-border bg-[#041426]">
+      <div className="grid min-h-[710px] lg:grid-cols-[49%_51%]">
+        <div className="relative isolate flex min-h-[570px] flex-col justify-between overflow-hidden bg-[#071526] lg:min-h-[710px]">
+          <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,#041426_0%,#041426_10%,rgba(4,20,38,0.96)_30%,rgba(4,20,38,0.28)_65%,rgba(4,20,38,0)_100%)]" />
+          <div className="relative z-10 px-6 pt-16 sm:px-12 lg:pl-[max(3rem,calc((100vw-1440px)/2))] lg:pt-20">
+            <div className="flex items-center gap-4 text-xs font-medium uppercase tracking-[0.25em] text-foreground/90 sm:text-sm">
+              <span className="h-px w-12 bg-accent" aria-hidden="true" />
               About the Desk
             </div>
-            <h2 className="mt-7 max-w-xl text-balance font-serif text-4xl font-semibold leading-[1.12] tracking-tight text-foreground sm:text-5xl xl:text-6xl">
+            <h2 className="mt-7 max-w-[690px] text-balance font-serif text-[clamp(2.5rem,4vw,4.2rem)] font-semibold leading-[1.12] tracking-tight text-foreground">
               Built on the <span className="text-accent">buy-side</span> and the <span className="text-accent">sell-side.</span>
             </h2>
-            <p className="mt-6 text-xs font-medium uppercase tracking-[0.18em] leading-6 text-foreground/75 sm:text-sm">
+            <p className="mt-6 text-xs font-medium uppercase tracking-[0.18em] leading-6 text-foreground/90 sm:text-sm">
               Institutional discipline. Independent thinking.
             </p>
           </div>
-          <div className="relative mt-14 hidden min-h-52 overflow-hidden rounded-sm border border-accent/20 bg-gradient-to-br from-[#172e46] via-[#0a1c30] to-[#08101e] shadow-[0_20px_70px_rgba(0,0,0,0.22)] lg:block">
-            <div aria-hidden="true" className="absolute -right-20 -top-28 h-72 w-72 rounded-full border border-accent/20 shadow-[0_0_0_28px_rgba(212,168,92,0.035),0_0_0_65px_rgba(212,168,92,0.025),0_0_0_110px_rgba(212,168,92,0.015)]" />
-            <div className="relative flex h-full flex-col justify-end p-8">
-              <div className="mb-5 h-px w-12 bg-accent" />
-              <p className="font-serif text-3xl text-foreground">25+ years</p>
-              <p className="mt-2 max-w-xs text-sm leading-relaxed text-foreground/75">Institutional capital markets experience informing every research note.</p>
-            </div>
+          <div className="relative z-0 mt-8 h-[285px] w-full sm:h-[370px] lg:h-[430px]">
+            <Image
+              src="/images/about-desk-background.png"
+              alt="Financial research desk with capital markets books, investment reports, a pen, and an illuminated globe"
+              fill
+              sizes="(min-width: 1024px) 49vw, 100vw"
+              className="object-cover object-center"
+            />
+            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#041426] via-transparent to-transparent" />
           </div>
         </div>
-        <div className="divide-y divide-white/15 border-y border-white/15">
-          {pillars.map(({ icon: Icon, label, copy }) => (
-            <article key={label} className="group grid gap-5 py-8 sm:grid-cols-[64px_1fr] sm:gap-7 sm:py-9">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-accent/40 bg-accent/[0.07] text-accent shadow-[0_0_28px_rgba(214,173,96,0.08)] transition-colors duration-300 group-hover:bg-accent/15">
-                <Icon aria-hidden="true" className="h-6 w-6" strokeWidth={1.65} />
+
+        <div className="relative isolate flex flex-col justify-center overflow-hidden bg-[#041426] px-6 py-14 sm:px-12 lg:py-20 lg:pl-12 lg:pr-[max(3rem,calc((100vw-1440px)/2))]">
+          <div className="relative z-10 divide-y divide-white/20">
+            {details.map(({ icon: Icon, copy }, index) => (
+              <div key={index} className="grid grid-cols-[56px_1fr] gap-5 py-7 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-7 lg:py-9">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-accent/70 bg-[#0c1e30]/90 text-accent shadow-[0_0_0_3px_rgba(218,172,92,0.08)] sm:h-16 sm:w-16">
+                  <Icon aria-hidden="true" className="h-7 w-7" strokeWidth={1.7} />
+                </div>
+                <p className="text-[15px] leading-[1.85] text-foreground/90 sm:text-[17px]">{copy}</p>
               </div>
-              <div>
-                <h3 className="mb-3 font-serif text-xl font-semibold text-foreground sm:text-2xl">{label}</h3>
-                <p className="text-base leading-8 text-foreground/80 sm:text-[17px]">{copy}</p>
-              </div>
-            </article>
-          ))}
+            ))}
+          </div>
+          <div className="pointer-events-none relative -mb-14 mt-2 h-28 w-full opacity-80 sm:h-40 lg:-mb-20 lg:h-44" aria-hidden="true">
+            <Image src="/images/about-global-network.png" alt="" fill sizes="(min-width: 1024px) 51vw, 100vw" className="object-cover object-top" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#041426] via-transparent to-transparent" />
+          </div>
         </div>
       </div>
     </section>
