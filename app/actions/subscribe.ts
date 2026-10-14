@@ -7,7 +7,7 @@ export type SubscribeState = {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const INTERESTS = ["India Equities", "US Equities", "The Corridor Thesis", "Everything"]
-const PLANS = ["Research - $99", "Desk+ - $199", "IntelFox Global - $299"]
+const PLANS = ["Research - $199", "Desk+ - $399", "IntelFox Global - $999"]
 
 export async function subscribe(_prev: SubscribeState, formData: FormData): Promise<SubscribeState> {
   const name = String(formData.get("name") ?? "").trim()
