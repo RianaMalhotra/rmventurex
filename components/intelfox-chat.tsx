@@ -53,6 +53,21 @@ function getReply(question: string): Reply {
     : { text: "I can answer questions about RMVentureX, subscriptions, research, pricing, and the India–Canada corridor. Try one of the suggested questions!", href: "/#about", label: "Learn about RMVentureX", showSuggestions: true }
 }
 
+function FoxMascot({ small = false }: { small?: boolean }) {
+  return (
+    <span aria-hidden="true" className={`intelfox-float relative inline-flex shrink-0 items-center justify-center ${small ? "size-10" : "size-12"}`}>
+      <svg viewBox="0 0 64 64" className="h-full w-full drop-shadow-[0_0_9px_rgba(241,205,130,.45)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 10 24 20 32 17 40 20 56 10 52 37 46 49 32 57 18 49 12 37Z" fill="#E9A84D" stroke="#F9D993" strokeWidth="2.2" strokeLinejoin="round"/>
+        <path d="M14 17 24 25 16 30Z M50 17 40 25 48 30Z" fill="#9A542A"/>
+        <path d="M13 35 25 38 32 48 39 38 51 35 46 48 32 56 18 48Z" fill="#FFF1D5"/>
+        <g className="intelfox-eyes" fill="#0B203B"><ellipse cx="24" cy="34" rx="2.5" ry="3.3"/><ellipse cx="40" cy="34" rx="2.5" ry="3.3"/></g>
+        <path d="m28 46 4 3 4-3Z" fill="#15283B"/>
+        <path d="M31 49v2" stroke="#15283B" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+    </span>
+  )
+}
+
 export function IntelFoxChat() {
   const [open, setOpen] = useState(false)
   const [input, setInput] = useState("")
@@ -78,7 +93,7 @@ export function IntelFoxChat() {
       {open && (
         <section aria-label="IntelFox website assistant" className="flex h-[min(340px,48dvh)] w-[min(320px,calc(100vw-40px))] flex-col overflow-hidden rounded-2xl sm:h-[min(520px,75dvh)] sm:w-[min(360px,calc(100vw-40px))] border border-[#d5a64e]/70 bg-[#071427] text-white shadow-[0_12px_48px_rgba(0,0,0,.55),0_0_24px_rgba(213,166,78,.18)]">
           <div className="flex items-center gap-3 border-b border-[#d5a64e]/30 bg-[#0b203b] px-4 py-3">
-            <span aria-hidden="true" className="flex size-11 items-center justify-center rounded-full border border-[#f1cd82]/60 bg-[#142b48] text-2xl">🦊</span>
+            <FoxMascot small />
             <div className="min-w-0 flex-1">
               <p className="font-semibold text-[#f1cd82]">IntelFox</p>
               <p className="text-xs text-[#b9c9df]">RMVentureX website guide</p>
@@ -120,8 +135,9 @@ export function IntelFoxChat() {
           <p className="pb-2 text-center text-[10px] text-[#9aabc0]">Website navigation assistant · Not investment advice</p>
         </section>
       )}
+      {!open && <div className="intelfox-greeting pointer-events-none rounded-xl border border-[#d5a64e]/55 bg-[#0b203b] px-3 py-2 text-xs font-medium text-[#f1cd82] shadow-lg" aria-hidden="true">Need investment insights? ✨</div>}
       <button type="button" onClick={() => setOpen((value) => !value)} aria-label={open ? "Close IntelFox" : "Chat with IntelFox"} aria-expanded={open} className="group flex items-center gap-2 rounded-full border-2 border-[#f1cd82] bg-[#0b203b] px-4 py-3 text-[#f1cd82] shadow-[0_0_22px_rgba(241,205,130,.3)] transition-all hover:-translate-y-1 hover:shadow-[0_0_32px_rgba(241,205,130,.55)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f1cd82]">
-        <span className="text-2xl" aria-hidden="true">🦊</span>
+        <FoxMascot small />
         <span className="text-sm font-semibold">Ask IntelFox</span>
         {open ? <X size={17} /> : <MessageCircle size={17} />}
       </button>
