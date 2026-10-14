@@ -4,8 +4,8 @@ import { useState, type FormEvent } from "react"
 import Link from "next/link"
 import { ArrowRight, MessageCircle, Send, X } from "lucide-react"
 
-type Reply = { text: string; href?: string; label?: string }
-type Message = { role: "visitor" | "fox"; text: string; href?: string; label?: string }
+type Reply = { text: string; href?: string; label?: string; showSuggestions?: boolean }
+type Message = { role: "visitor" | "fox"; text: string; href?: string; label?: string; showSuggestions?: boolean }
 
 const suggestions = ["What is RMVentureX?", "Why should I subscribe?", "What is included?", "How much does it cost?", "Explore research", "Contact the desk"]
 
@@ -50,7 +50,7 @@ function getReply(question: string): Reply {
   const match = faq.find((item) => item.terms.some((term) => q.includes(term)))
   return match
     ? { text: match.text, href: match.href, label: match.label }
-    : { text: "I can answer questions about RMVentureX, subscriptions, research, pricing, and the India–Canada corridor. Try one of the suggested questions!", href: "/#about", label: "Learn about RMVentureX" }
+    : { text: "I can answer questions about RMVentureX, subscriptions, research, pricing, and the India–Canada corridor. Try one of the suggested questions!", href: "/#about", label: "Learn about RMVentureX", showSuggestions: true }
 }
 
 export function IntelFoxChat() {
@@ -96,6 +96,13 @@ export function IntelFoxChat() {
                     </Link>
                   )}
                 </div>
+                {message.role === "fox" && message.showSuggestions && (
+                  <div className="mt-2 flex flex-wrap gap-2" aria-label="Suggested questions">
+                    {suggestions.map((item) => (
+                      <button key={item} type="button" onClick={() => ask(item)} className="rounded-full border border-[#d5a64e]/50 px-3 py-1.5 text-xs text-[#f1cd82] transition-colors hover:bg-[#d5a64e]/15">{item}</button>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
             {messages.length === 1 && (
