@@ -1,11 +1,52 @@
 "use client"
 
-import { useActionState } from "react"
+import { useActionState, useEffect, useState } from "react"
 import { ArrowRight, CheckCircle2, LoaderCircle } from "lucide-react"
 import { subscribe, type SubscribeState } from "@/app/actions/subscribe"
 
 const initialState: SubscribeState = { status: "idle", message: "" }
 const inputClass = "mt-2 w-full rounded-md border border-border bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/70 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/25"
+
+function GoldenConfetti() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+    setVisible(true)
+    const timer = window.setTimeout(() => setVisible(false), 4200)
+    return () => window.clearTimeout(timer)
+  }, [])
+
+  if (!visible) return null
+
+  return (
+    <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-[100] overflow-hidden">
+      {Array.from({ length: 72 }, (_, index) => {
+        const left = (index * 73.7 + 11) % 100
+        const delay = (index * 0.071) % 1.2
+        const duration = 2.3 + (index % 8) * 0.22
+        const colors = ["#f1cd82", "#d5a64e", "#ffe4a4", "#c9983d", "#fff0c6"]
+        return (
+          <span
+            key={index}
+            className="absolute top-[-25px] block animate-[gold-confetti-fall_var(--fall-duration)_ease-in_var(--fall-delay)_both]"
+            style={{
+              left: `${left}%`,
+              width: index % 3 === 0 ? 7 : 5,
+              height: index % 4 === 0 ? 13 : 9,
+              backgroundColor: colors[index % colors.length],
+              borderRadius: index % 5 === 0 ? "50%" : "1px",
+              transform: `rotate(${index * 29}deg)`,
+              ["--fall-delay" as string]: `${delay}s`,
+              ["--fall-duration" as string]: `${duration}s`,
+              ["--confetti-drift" as string]: `${((index * 37) % 180) - 90}px`,
+            }}
+          />
+        )
+      })}
+    </div>
+  )
+}
 
 export function Subscribe() {
   const [state, formAction, pending] = useActionState(subscribe, initialState)
@@ -18,10 +59,13 @@ export function Subscribe() {
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">Choose your research interests and subscription plan. Someone from RMVentureX will contact you separately regarding payment and subscription options.</p>
         </div>
         {state.status === "success" ? (
-          <div role="status" className="mx-auto mt-10 flex max-w-xl items-start gap-3 rounded-lg border border-accent/40 bg-accent/10 p-5 text-foreground">
+          <>
+            <GoldenConfetti />
+          <div role="status" className="relative mx-auto mt-10 flex max-w-xl items-start gap-3 rounded-lg border border-accent/40 bg-accent/10 p-5 text-foreground">
             <CheckCircle2 className="mt-0.5 size-6 shrink-0 text-accent" />
             <div><p className="font-semibold">Request received</p><p className="mt-1 text-sm text-muted-foreground">{state.message}</p></div>
           </div>
+          </>
         ) : (
           <form action={formAction} className="mx-auto mt-10 max-w-2xl space-y-5">
             <div className="grid gap-5 sm:grid-cols-2">
