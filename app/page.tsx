@@ -1,6 +1,7 @@
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { SiteHeader } from "@/components/site-header"
 import { TickerStrip } from "@/components/ticker-strip"
+import { MarketPulse } from "@/components/market-pulse"
 import { Hero } from "@/components/hero"
 import { ResearchTypes } from "@/components/research-types"
 import { FeaturedResearch } from "@/components/featured-research"
@@ -26,6 +27,7 @@ export default function Page() {
           </div>
         </section>
         <Hero />
+        <MarketPulse />
         <ScrollReveal>
           <ResearchTypes />
         </ScrollReveal>
