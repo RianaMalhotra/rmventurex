@@ -56,10 +56,7 @@ export function About() {
               </div>
             ))}
           </div>
-          <div className="pointer-events-none relative -mb-14 mt-2 h-28 w-full opacity-80 sm:h-40 lg:-mb-20 lg:h-44" aria-hidden="true">
-            <Image src="/images/about-global-network.png" alt="" fill sizes="(min-width: 1024px) 51vw, 100vw" className="object-cover object-top" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#041426] via-transparent to-transparent" />
-          </div>
+
         </div>
       </div>
     </section>
