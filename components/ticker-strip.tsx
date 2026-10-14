@@ -14,7 +14,7 @@ const tickers = [
 export function TickerStrip() {
   const row = [...tickers, ...tickers]
   return (
-    <div className="overflow-hidden border-y border-border bg-primary text-primary-foreground">
+    <div className="gold-ticker-frame overflow-hidden border-y bg-primary text-primary-foreground">
       <div className="flex w-max animate-[ticker_38s_linear_infinite] items-center">
         {row.map((t, i) => (
           <div key={i} className="flex items-center gap-2 whitespace-nowrap px-5 py-2.5 text-xs">
