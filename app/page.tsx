@@ -1,3 +1,4 @@
+import { ScrollReveal } from "@/components/scroll-reveal"
 import { SiteHeader } from "@/components/site-header"
 import { TickerStrip } from "@/components/ticker-strip"
 import { Hero } from "@/components/hero"
@@ -15,7 +16,7 @@ export default function Page() {
       <SiteHeader />
       <TickerStrip />
       <main>
-        <section aria-label="RMVentureX promotional banner" className="px-4 pt-8 sm:px-6 lg:px-8">
+        <section aria-label="RMVentureX promotional banner" className="banner-entrance px-4 pt-8 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <img
               src="/images/rmventurex-banner.png"
@@ -25,12 +26,24 @@ export default function Page() {
           </div>
         </section>
         <Hero />
-        <ResearchTypes />
-        <FeaturedResearch />
-        <Corridor />
-        <About />
-        <Pricing />
-        <Subscribe />
+        <ScrollReveal>
+          <ResearchTypes />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FeaturedResearch />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Corridor />
+        </ScrollReveal>
+        <ScrollReveal>
+          <About />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Pricing />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Subscribe />
+        </ScrollReveal>
       </main>
       <SiteFooter />
     </div>
