@@ -35,13 +35,7 @@ export function SiteHeader() {
           size="sm"
           className="rounded-sm"
           nativeButton={false}
-          render={
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfXQs1DzQvsKH8ZgfrjF1V5zSYOXRT7ChQ3SHQDniczGJddcA/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-            />
-          }
+          render={<Link href="/#subscribe" />}
         >
           Subscribe
         </Button>
