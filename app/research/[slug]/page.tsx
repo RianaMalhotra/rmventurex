@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, ArrowRight, LockKeyhole, ChartNoAxesCombined } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { researchNotes, type ResearchKind } from "@/lib/research-data"
@@ -72,15 +72,57 @@ export default async function ResearchNotePage({ params }: { params: Promise<{ s
             <span>{note.readMins} min read</span>
           </div>
 
-          <p className="mt-8 text-pretty text-lg leading-relaxed text-foreground">{note.excerpt}</p>
+          <div className="mt-9 space-y-5 text-base leading-8 text-foreground/85 sm:text-lg">
+            <p className="text-pretty">{note.excerpt}</p>
+            <p className="text-pretty">
+              This research preview introduces the central investment question and the factors our desk
+              considers before taking a position. We examine the business fundamentals, the market
+              assumptions behind the current valuation, and the developments that could change the thesis.
+            </p>
+          </div>
 
-          <div className="mt-10 rounded-sm border border-dashed border-border bg-secondary/40 p-6 text-sm leading-relaxed text-muted-foreground">
-            The full note — including the model, comparables, and risk section — is available to Research and
-            Desk+ subscribers.{" "}
-            <Link href="/#pricing" className="font-medium text-foreground underline underline-offset-2">
-              See plans
-            </Link>
-            .
+          <div className="mt-10 border-y border-border py-7">
+            <div className="flex items-center gap-3 text-accent">
+              <ChartNoAxesCombined className="size-5" aria-hidden="true" />
+              <h2 className="font-serif text-xl font-semibold text-foreground">Inside the full research note</h2>
+            </div>
+            <div className="mt-5 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
+              <div className="rounded-md border border-border bg-secondary/30 px-4 py-3">Investment thesis &amp; key drivers</div>
+              <div className="rounded-md border border-border bg-secondary/30 px-4 py-3">Valuation framework &amp; scenarios</div>
+              <div className="rounded-md border border-border bg-secondary/30 px-4 py-3">Risks &amp; counterarguments</div>
+              <div className="rounded-md border border-border bg-secondary/30 px-4 py-3">Catalysts &amp; monitoring points</div>
+            </div>
+          </div>
+
+          <div className="relative mt-9 overflow-hidden rounded-xl border border-border bg-card">
+            <div aria-hidden="true" className="pointer-events-none select-none px-7 pb-24 pt-7 blur-[5px] sm:px-10">
+              <h2 className="font-serif text-2xl font-semibold text-foreground">Thesis &amp; valuation framework</h2>
+              <p className="mt-5 leading-8 text-muted-foreground">
+                A disciplined valuation begins by separating durable operating performance from
+                temporary market expectations. The complete note evaluates multiple scenarios,
+                identifies the assumptions with the greatest impact, and considers what evidence
+                would strengthen or weaken the investment case.
+              </p>
+              <p className="mt-4 leading-8 text-muted-foreground">
+                Our risk review weighs business execution, industry structure, capital allocation,
+                and macroeconomic sensitivity against the potential catalysts ahead.
+              </p>
+            </div>
+            <div className="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-b from-background/5 via-background/70 to-background px-5 pb-8 pt-24 text-center sm:pb-10">
+              <div className="flex size-12 items-center justify-center rounded-full border border-accent/50 bg-background text-accent shadow-lg">
+                <LockKeyhole className="size-5" aria-hidden="true" />
+              </div>
+              <h2 className="mt-4 font-serif text-2xl font-semibold text-foreground">Continue with RMVentureX</h2>
+              <p className="mt-2 max-w-md text-sm leading-6 text-muted-foreground">
+                Unlock the complete research note, including detailed analysis, valuation scenarios, and risk assessment.
+              </p>
+              <Link
+                href="/#pricing"
+                className="mt-6 inline-flex items-center gap-2 rounded-md border border-[#f3d28d]/60 bg-gradient-to-r from-[#d5a64e] via-[#f1cd82] to-[#c9983d] px-7 py-3 text-sm font-semibold text-[#071427] shadow-[0_4px_18px_rgba(218,169,77,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_26px_rgba(218,169,77,0.4)]"
+              >
+                See Plans <ArrowRight className="size-4" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
         </article>
       </main>
