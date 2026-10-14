@@ -34,7 +34,7 @@ export function FeaturedResearch() {
             <Link
               key={note.slug}
               href={`/research/${note.slug}`}
-              className="group flex flex-col rounded-sm border border-border bg-card p-6 transition-colors hover:border-accent"
+              className="premium-card group flex flex-col rounded-sm border border-border bg-card p-6 hover:border-accent"
             >
               <div className="flex items-center justify-between gap-3">
                 <span
