@@ -286,3 +286,24 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .gold-banner-frame::after { animation: none; opacity: 0; }
 }
+
+/* IntelFox: gentle floating mascot with a periodic eye blink */
+@keyframes intelfox-hover {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-4px) rotate(2deg); }
+}
+@keyframes intelfox-blink {
+  0%, 42%, 46%, 100% { transform: scaleY(1); }
+  44% { transform: scaleY(.08); }
+}
+@keyframes intelfox-hello {
+  0% { opacity: 0; transform: translateY(7px); }
+  12%, 82% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-5px); }
+}
+.intelfox-float { animation: intelfox-hover 3.5s ease-in-out infinite; }
+.intelfox-eyes { transform-box: fill-box; transform-origin: center; animation: intelfox-blink 5s ease-in-out infinite; }
+.intelfox-greeting { animation: intelfox-hello 8s ease-in-out 1 both; }
+@media (prefers-reduced-motion: reduce) {
+  .intelfox-float, .intelfox-eyes, .intelfox-greeting { animation: none; }
+}
