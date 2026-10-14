@@ -73,7 +73,7 @@ export function Pricing() {
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`premium-card flex flex-col gap-6 rounded-sm border p-7 ${
+              className={`premium-card flex flex-col gap-6 rounded-lg border p-8 ${
                 tier.featured ? "border-accent bg-card ring-1 ring-accent" : "border-border bg-card"
               }`}
             >
@@ -88,12 +88,12 @@ export function Pricing() {
                   <span className="font-serif text-3xl font-semibold text-foreground">{tier.price}</span>
                   <span className="text-sm text-muted-foreground">{tier.cadence}</span>
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{tier.description}</p>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">{tier.description}</p>
               </div>
 
               <ul className="flex flex-1 flex-col gap-2.5">
                 {tier.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm text-foreground">
+                  <li key={f} className="flex items-start gap-3 text-[15px] text-foreground">
                     <Check className="mt-0.5 size-4 shrink-0 text-accent" strokeWidth={1.8} />
                     <span className="leading-relaxed">{f}</span>
                   </li>
@@ -103,7 +103,7 @@ export function Pricing() {
               <Button
                 size="lg"
                 variant={tier.featured ? "default" : "outline"}
-                className="rounded-sm"
+                className="rounded-md"
                 nativeButton={false}
                 render={<Link href="#subscribe" />}
               >
