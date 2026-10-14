@@ -10,29 +10,16 @@ export function Corridor() {
   return (
     <section id="corridor" className="border-b border-border">
       <div className="mx-auto grid max-w-6xl items-stretch gap-0 md:grid-cols-2">
-        <div className="grid min-h-[440px] grid-rows-2 overflow-hidden border-b border-border md:min-h-[600px] md:border-b-0 md:border-r">
-          <div className="relative overflow-hidden">
-            <Image
-              src="/images/nyc-skyline.svg"
-              alt="Illustration of the New York City skyline with Manhattan skyscrapers"
-              fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-center"
-              loading="lazy"
-            />
-            <span className="absolute bottom-3 left-4 rounded bg-background/80 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">New York</span>
-          </div>
-          <div className="relative overflow-hidden border-t border-accent/40">
-            <Image
-              src="/images/toronto-skyline.png"
-              alt="Toronto skyline at dusk with the CN Tower"
-              fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-[center_62%]"
-              loading="lazy"
-            />
-            <span className="absolute bottom-3 left-4 rounded bg-background/80 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">Toronto</span>
-          </div>
+        <div className="relative min-h-[360px] overflow-hidden border-b border-border md:min-h-[600px] md:border-b-0 md:border-r">
+          <Image
+            src="/images/toronto-skyline.png"
+            alt="Toronto skyline at dusk with the CN Tower"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover object-[center_65%]"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-primary/10" aria-hidden />
         </div>
 
         <div className="px-5 py-16 md:px-12">
