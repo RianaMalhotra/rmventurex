@@ -37,7 +37,7 @@ export function SiteHeader() {
           nativeButton={false}
           render={<Link href="/#subscribe" />}
         >
-          Subscribe <span aria-hidden="true" className="ml-1 inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+          Subscribe
         </Button>
       </div>
     </header>
