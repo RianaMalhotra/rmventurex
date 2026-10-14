@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Mail, Phone, Linkedin, Youtube } from "lucide-react"
 
 export function SiteFooter() {
   return (
@@ -35,21 +36,21 @@ export function SiteFooter() {
               </span>
 
               <Link
-                href="#research"
+                href="/#research"
                 className="text-sm text-foreground hover:text-accent"
               >
                 Selected Notes
               </Link>
 
               <Link
-                href="#approach"
+                href="/#approach"
                 className="text-sm text-foreground hover:text-accent"
               >
                 Our Approach
               </Link>
 
               <Link
-                href="#corridor"
+                href="/#corridor"
                 className="text-sm text-foreground hover:text-accent"
               >
                 The Corridor
@@ -63,14 +64,14 @@ export function SiteFooter() {
               </span>
 
               <Link
-                href="#about"
+                href="/#about"
                 className="text-sm text-foreground hover:text-accent"
               >
                 About
               </Link>
 
               <Link
-                href="#subscribe"
+                href="/#subscribe"
                 className="text-sm text-foreground hover:text-accent"
               >
                 Subscribe
@@ -82,42 +83,25 @@ export function SiteFooter() {
               <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                 Contact
               </span>
-
-              {/* Email */}
-              <a
-                href="mailto:intelfox@rmventurex.com"
-                className="text-sm text-foreground hover:text-accent"
-              >
-                Email
-              </a>
-
-              {/* Phone */}
-              <a
-                href="tel:+16473542369"
-                className="text-sm text-foreground hover:text-accent"
-              >
-                Call: +1 (647) 354-2369
-              </a>
-
-              {/* LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/rahulmalhotrabgold/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-foreground hover:text-accent"
-              >
-                LinkedIn
-              </a>
-
-              {/* YouTube */}
-              <a
-                href="https://www.youtube.com/@RMVentureX"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-foreground hover:text-accent"
-              >
-                YouTube
-              </a>
+              <div className="flex flex-wrap items-center gap-3 pt-1">
+                {[
+                  { label: "Email", href: "mailto:intelfox@rmventurex.com", icon: Mail },
+                  { label: "Call", href: "tel:+16473542369", icon: Phone },
+                  { label: "LinkedIn", href: "https://www.linkedin.com/in/rahulmalhotrabgold/", icon: Linkedin },
+                  { label: "YouTube", href: "https://www.youtube.com/@RMVentureX", icon: Youtube },
+                ].map(({ label, href, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    title={label}
+                    {...(href.startsWith("https://") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="inline-flex size-10 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-[#f1cd82] hover:bg-[#f1cd82]/10 hover:text-[#f1cd82] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f1cd82]"
+                  >
+                    <Icon className="size-5" strokeWidth={1.8} aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
             </div>
 
           </div>
