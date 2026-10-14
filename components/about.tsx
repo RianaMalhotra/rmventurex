@@ -20,8 +20,16 @@ export function About() {
   return (
     <section id="about" className="relative isolate overflow-hidden border-b border-border bg-[#041426]">
       <div className="grid min-h-[710px] lg:grid-cols-[49%_51%]">
-        <div className="relative isolate flex min-h-[570px] flex-col justify-between overflow-hidden bg-[#071526] lg:min-h-[710px]">
-          <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,#041426_0%,#041426_10%,rgba(4,20,38,0.96)_30%,rgba(4,20,38,0.28)_65%,rgba(4,20,38,0)_100%)]" />
+        <div className="relative isolate flex min-h-[570px] flex-col overflow-hidden bg-[#071526] lg:min-h-[710px]">
+          <Image
+            src="/images/about-desk-background.png"
+            alt="Financial research desk with capital markets books, investment reports, a pen, and an illuminated globe"
+            fill
+            priority={false}
+            sizes="(min-width: 1024px) 49vw, 100vw"
+            className="absolute inset-0 -z-20 object-cover object-center"
+          />
+          <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-b from-[#041426]/90 via-[#041426]/55 to-[#041426]/10" />
           <div className="relative z-10 px-6 pt-16 sm:px-12 lg:pl-[max(3rem,calc((100vw-1440px)/2))] lg:pt-20">
             <div className="flex items-center gap-4 text-xs font-medium uppercase tracking-[0.25em] text-foreground/90 sm:text-sm">
               <span className="h-px w-12 bg-accent" aria-hidden="true" />
@@ -34,16 +42,7 @@ export function About() {
               Institutional discipline. Independent thinking.
             </p>
           </div>
-          <div className="relative z-0 mt-8 h-[285px] w-full sm:h-[370px] lg:h-[430px]">
-            <Image
-              src="/images/about-desk-background.png"
-              alt="Financial research desk with capital markets books, investment reports, a pen, and an illuminated globe"
-              fill
-              sizes="(min-width: 1024px) 49vw, 100vw"
-              className="object-cover object-center"
-            />
-            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#041426] via-transparent to-transparent" />
-          </div>
+
         </div>
 
         <div className="relative isolate flex flex-col justify-center overflow-hidden bg-[#041426] px-6 py-14 sm:px-12 lg:py-20 lg:pl-12 lg:pr-[max(3rem,calc((100vw-1440px)/2))]">
