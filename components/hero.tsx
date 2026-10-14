@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-border">
-      <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
+      <div className="hero-entrance mx-auto max-w-6xl px-5 py-20 md:py-28">
         <div className="flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
           <span className="h-px w-8 bg-accent" aria-hidden />
            AI POWERED INVESTMENT INTELLIGENCE & RESEARCH
