@@ -44,9 +44,9 @@ export function Subscribe() {
             <label className="block text-sm font-medium text-foreground">Subscription <span className="text-accent">*</span>
               <select name="plan" required defaultValue="" className={inputClass}>
                 <option value="" disabled>Choose a subscription plan</option>
-                <option value="Research - $99">Research - $99</option>
-                <option value="Desk+ - $199">Desk+ - $199</option>
-                <option value="IntelFox Global - $299">IntelFox Global - $299</option>
+                <option value="Research - $199">Research - $199</option>
+                <option value="Desk+ - $399">Desk+ - $399</option>
+                <option value="IntelFox Global - $999">IntelFox Global - $999</option>
               </select>
             </label>
             <label className="flex items-start gap-3 text-sm leading-relaxed text-muted-foreground">
