@@ -33,7 +33,7 @@ export function ResearchTypes() {
 
         <div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
           {types.map((t) => (
-            <div key={t.label} className="flex flex-col gap-4 bg-card p-7">
+            <div key={t.label} className="premium-card flex flex-col gap-4 bg-card p-7">
               <t.icon className="size-6 text-accent" strokeWidth={1.6} />
               <h3 className="font-serif text-xl font-semibold text-foreground">{t.label}</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">{t.body}</p>
