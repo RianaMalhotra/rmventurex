@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -18,7 +19,7 @@ export function Hero() {
         <p className="mt-7 max-w-3xl text-pretty text-lg leading-[1.85] text-muted-foreground">
           RMVentureX pairs institutional research discipline with AI-powered analysis. 
           Our models continuously scan filings, price action, and macro data across Indian and US markets to surface signals human analysts would take days to find.
-          then our team stress-tests every call before it reaches you. The result is research that moves at the speed of AI, with the judgment of 25+ years in capital markets behind it.
+          Our team stress-tests every call before it reaches you. The result is research that moves at the speed of AI, with the judgment of 25+ years in capital markets behind it.
         </p>
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -37,7 +38,19 @@ export function Hero() {
           </Button>
         </div>
 
-        <dl className="mt-16 grid max-w-3xl grid-cols-2 gap-x-8 gap-y-8 border-t border-border pt-10 sm:grid-cols-4">
+        <div className="relative mt-14 h-44 overflow-hidden rounded-lg border border-border sm:h-56 md:h-72">
+          <Image
+            src="/corridor.png"
+            alt="Waterfront financial district skyline at dusk"
+            fill
+            sizes="(min-width: 1152px) 1152px, 100vw"
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-primary/15" aria-hidden />
+        </div>
+
+        <dl className="mt-10 grid max-w-3xl grid-cols-2 gap-x-8 gap-y-8 border-t border-border pt-10 sm:grid-cols-4">
           <div>
             <dt className="text-xs uppercase tracking-wider text-muted-foreground">Coverage</dt>
             <dd className="mt-1.5 font-serif text-2xl font-semibold text-foreground">India + US</dd>
