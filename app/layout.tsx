@@ -19,23 +19,24 @@ export const metadata: Metadata = {
   title: 'RMVentureX — AI POWERED INVESTMENT INTELLIGENCE & RESEARCH',
   description:
     'RMVentureX is an AI powered equity research desk covering Indian and US-listed companies, with a thematic focus on the India–Canada investment corridor. Deep-dives, sector themes, and contrarian calls for investors who act on research.',
-  generator: 'v0.app',
+  metadataBase: new URL('https://www.rmventurex.com'),
+  openGraph: {
+    type: 'website',
+    url: 'https://www.rmventurex.com',
+    siteName: 'RMVentureX',
+    title: 'RMVentureX | AI-Powered Investment Research',
+    description: 'Independent AI-powered investment intelligence covering Indian and US equities and the India–Canada investment corridor.',
+    images: [{ url: '/images/rmventurex-banner.png', width: 1500, height: 750, alt: 'RMVentureX AI-Powered Investment Intelligence & Research' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'RMVentureX | AI-Powered Investment Research',
+    description: 'Independent AI-powered investment intelligence covering Indian and US equities.',
+    images: ['/images/rmventurex-banner.png'],
+  },
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    shortcut: '/icon.svg',
   },
 }
 
