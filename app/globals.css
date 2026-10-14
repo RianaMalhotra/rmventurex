@@ -252,3 +252,37 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .animate-\\[gold-confetti-fall_var\\(--fall-duration\\)_ease-in_var\\(--fall-delay\\)_both\\] { animation: none !important; }
 }
+
+/* Illuminated gold frames for the market ticker and promotional banner */
+.gold-ticker-frame {
+  position: relative;
+  border-color: #e7b95c;
+  box-shadow: 0 0 9px rgba(245, 195, 93, .7), 0 0 23px rgba(216, 159, 54, .28), inset 0 0 10px rgba(245, 195, 93, .13);
+}
+.gold-banner-frame {
+  position: relative;
+  isolation: isolate;
+  border: 2px solid #e7b95c;
+  border-radius: .65rem;
+  box-shadow: 0 0 8px rgba(255, 211, 121, .85), 0 0 26px rgba(218, 169, 77, .38), inset 0 0 12px rgba(255, 211, 121, .12);
+}
+.gold-banner-frame::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(110deg, transparent 28%, rgba(255, 245, 201, .9) 49%, transparent 70%);
+  background-size: 250% 100%;
+  opacity: .35;
+  mix-blend-mode: screen;
+  animation: gold-border-shimmer 7s ease-in-out infinite;
+}
+@keyframes gold-border-shimmer {
+  0%, 22% { background-position: 100% 0; opacity: 0; }
+  42% { opacity: .35; }
+  70%, 100% { background-position: 0 0; opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gold-banner-frame::after { animation: none; opacity: 0; }
+}
