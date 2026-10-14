@@ -29,12 +29,12 @@ export function FeaturedResearch() {
           <p className="text-sm text-muted-foreground">A sample of recent published research.</p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {researchNotes.map((note) => (
             <Link
               key={note.slug}
               href={`/research/${note.slug}`}
-              className="premium-card group flex flex-col rounded-sm border border-border bg-card p-6 hover:border-accent"
+              className="premium-card group flex flex-col rounded-sm border border-border bg-card p-7 hover:border-accent"
             >
               <div className="flex items-center justify-between gap-3">
                 <span
@@ -47,10 +47,10 @@ export function FeaturedResearch() {
                 </span>
               </div>
 
-              <h3 className="mt-5 text-balance font-serif text-lg font-semibold leading-snug text-foreground">
+              <h3 className="mt-5 text-balance font-serif text-xl font-semibold leading-snug text-foreground">
                 {note.title}
               </h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{note.excerpt}</p>
+              <p className="mt-4 flex-1 text-base leading-relaxed text-muted-foreground">{note.excerpt}</p>
 
               <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
                 <div className="flex flex-col">
