@@ -12,8 +12,8 @@ export function Corridor() {
       <div className="mx-auto grid max-w-6xl items-stretch gap-0 md:grid-cols-2">
         <div className="relative min-h-[320px] overflow-hidden border-b border-border md:border-b-0 md:border-r">
           <Image
-            src="/corridor.png"
-            alt="A financial district skyline at dusk merging into distant mountains, evoking the cross-border capital corridor"
+            src="/toronto-skyline.svg"
+            alt="Toronto skyline at dusk, featuring the CN Tower and Lake Ontario"
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"
