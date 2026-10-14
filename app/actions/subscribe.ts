@@ -14,8 +14,13 @@ export async function subscribe(_prev: SubscribeState, formData: FormData): Prom
   const email = String(formData.get("email") ?? "").trim().toLowerCase()
   const name = String(formData.get("name") ?? "").trim()
   const interest = String(formData.get("interest") ?? "").trim()
+  const consent = formData.get("consent") === "on"
 
-  if (!EMAIL_RE.test(email)) {
+  if (!consent) {
+    return { status: "error", message: "Please agree to receive research emails before subscribing." }
+  }
+
+  if (!EMAIL_RE.test(email) || email.length > 254 || name.length > 120) {
     return { status: "error", message: "Please enter a valid email address." }
   }
 
@@ -34,7 +39,7 @@ export async function subscribe(_prev: SubscribeState, formData: FormData): Prom
       message: "You're on the list. Watch your inbox for the next research note.",
     }
   } catch (error) {
-    console.log("[v0] subscribe error:", error)
+    console.error("Subscription database request failed", error)
     return { status: "error", message: "Something went wrong. Please try again." }
   }
 }
