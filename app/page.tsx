@@ -16,6 +16,15 @@ export default function Page() {
       <SiteHeader />
       <TickerStrip />
       <main>
+        <section aria-label="RMVentureX promotional banner" className="px-4 pt-8 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <img
+              src="/images/rmventurex-banner.png"
+              alt="RMVentureX AI-powered investment intelligence and research promotional banner"
+              className="h-auto w-full rounded-xl object-contain"
+            />
+          </div>
+        </section>
         <Hero />
         <ResearchTypes />
         <FeaturedResearch />
