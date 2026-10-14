@@ -76,7 +76,7 @@ export function IntelFoxChat() {
   return (
     <div className="fixed bottom-5 right-5 z-[80] flex flex-col items-end gap-3 sm:bottom-7 sm:right-7">
       {open && (
-        <section aria-label="IntelFox website assistant" className="flex h-[min(520px,75dvh)] w-[min(360px,calc(100vw-40px))] flex-col overflow-hidden rounded-2xl border border-[#d5a64e]/70 bg-[#071427] text-white shadow-[0_12px_48px_rgba(0,0,0,.55),0_0_24px_rgba(213,166,78,.18)]">
+        <section aria-label="IntelFox website assistant" className="flex h-[min(340px,48dvh)] w-[min(320px,calc(100vw-40px))] flex-col overflow-hidden rounded-2xl sm:h-[min(520px,75dvh)] sm:w-[min(360px,calc(100vw-40px))] border border-[#d5a64e]/70 bg-[#071427] text-white shadow-[0_12px_48px_rgba(0,0,0,.55),0_0_24px_rgba(213,166,78,.18)]">
           <div className="flex items-center gap-3 border-b border-[#d5a64e]/30 bg-[#0b203b] px-4 py-3">
             <span aria-hidden="true" className="flex size-11 items-center justify-center rounded-full border border-[#f1cd82]/60 bg-[#142b48] text-2xl">🦊</span>
             <div className="min-w-0 flex-1">
