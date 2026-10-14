@@ -5,31 +5,31 @@ import { Button } from "@/components/ui/button"
 export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-border">
-      <div className="hero-entrance mx-auto max-w-6xl px-5 py-20 md:py-28">
-        <div className="flex items-center gap-2.5 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
+      <div className="hero-entrance mx-auto max-w-6xl px-5 py-16 md:py-24">
+        <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
           <span className="h-px w-8 bg-accent" aria-hidden />
            AI POWERED INVESTMENT INTELLIGENCE & RESEARCH
         </div>
 
-        <h1 className="mt-6 max-w-4xl text-balance font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl">
+        <h1 className="mt-6 max-w-4xl text-balance font-serif text-4xl font-semibold leading-[1.12] tracking-tight text-foreground sm:text-5xl md:text-6xl">
           Research you can act on. Not another headline.
         </h1>
 
-        <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
+        <p className="mt-7 max-w-3xl text-pretty text-lg leading-[1.85] text-muted-foreground">
           RMVentureX pairs institutional research discipline with AI-powered analysis. 
           Our models continuously scan filings, price action, and macro data across Indian and US markets to surface signals human analysts would take days to find.
           then our team stress-tests every call before it reaches you. The result is research that moves at the speed of AI, with the judgment of 25+ years in capital markets behind it.
         </p>
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Button size="lg" className="rounded-sm" nativeButton={false} render={<Link href="#subscribe" />}>
+          <Button size="lg" className="rounded-md" nativeButton={false} render={<Link href="#subscribe" />}>
             Get the research
             <ArrowRight className="size-4" />
           </Button>
           <Button
             size="lg"
             variant="outline"
-            className="rounded-sm bg-transparent"
+            className="rounded-md bg-transparent"
             nativeButton={false}
             render={<Link href="#research" />}
           >
