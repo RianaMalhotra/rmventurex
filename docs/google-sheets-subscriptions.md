@@ -29,7 +29,7 @@ function doPost(e) {
     if (!secret || p.token !== secret) return reply({ ok: false, error: "Unauthorized" });
 
     const validInterests = ["India Equities", "US Equities", "The Corridor Thesis", "Everything"];
-    const validPlans = ["Research - $99", "Desk+ - $199", "IntelFox Global - $299"];
+    const validPlans = ["Research - $199", "Desk+ - $399", "IntelFox Global - $999"];
     const name = String(p.name || "").trim();
     const email = String(p.email || "").trim().toLowerCase();
     const interest = String(p.interest || "");
