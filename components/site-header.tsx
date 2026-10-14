@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button"
 
 const nav = [
   { label: "Research", href: "#research" },
-  { label: "The Corridor", href: "#corridor" },
   { label: "Approach", href: "#approach" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "The Corridor", href: "#corridor" },
   { label: "About", href: "#about" },
+  { label: "Pricing", href: "#pricing" },
 ]
 
 export function SiteHeader() {
