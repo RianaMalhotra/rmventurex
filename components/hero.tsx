@@ -40,8 +40,8 @@ export function Hero() {
 
         <div className="relative mt-14 h-44 overflow-hidden rounded-lg border border-border sm:h-56 md:h-72">
           <Image
-            src="/corridor.png"
-            alt="Waterfront financial district skyline at dusk"
+            src="/images/toronto-skyline.png"
+            alt="Toronto skyline at dusk with the CN Tower reflected in Lake Ontario"
             fill
             sizes="(min-width: 1152px) 1152px, 100vw"
             className="object-cover object-center"
