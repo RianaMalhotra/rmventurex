@@ -7,26 +7,50 @@ import { ArrowRight, MessageCircle, Send, X } from "lucide-react"
 type Reply = { text: string; href?: string; label?: string }
 type Message = { role: "visitor" | "fox"; text: string; href?: string; label?: string }
 
-const suggestions = ["Explore research", "See pricing", "India–Canada corridor", "Contact the desk"]
-const destinations = [
-  { words: ["price", "pricing", "plan", "cost", "membership", "subscription"], text: "You can compare all RMVentureX research plans in the Pricing section.", href: "/#pricing", label: "See pricing" },
-  { words: ["subscribe", "sign up", "join", "register", "request access"], text: "Ready to join? The subscription inquiry form is right here.", href: "/#subscribe", label: "Go to subscription form" },
-  { words: ["research", "report", "notes", "stock", "equities", "market", "investment"], text: "Explore selected equity research notes and the desk's coverage.", href: "/#research", label: "Explore research" },
-  { words: ["corridor", "india", "canada", "cross-border"], text: "Discover the India–Canada investment corridor thesis.", href: "/#corridor", label: "Explore the corridor" },
-  { words: ["approach", "method", "how it works", "process", "strategy"], text: "Learn how RMVentureX approaches independent investment research.", href: "/#approach", label: "Our approach" },
-  { words: ["about", "team", "founder", "who are you", "company"], text: "Meet the research desk and learn more about RMVentureX.", href: "/#about", label: "About RMVentureX" },
-  { words: ["contact", "email", "phone", "call", "linkedin", "youtube", "reach"], text: "You can reach the desk through the contact links in the footer.", href: "/#contact", label: "Contact the desk" },
+const suggestions = ["What is RMVentureX?", "Why should I subscribe?", "What is included?", "How much does it cost?", "Explore research", "Contact the desk"]
+
+const faq: { terms: string[]; text: string; href: string; label: string }[] = [
+  { terms: ["what is rmventurex", "what does rmventurex", "tell me about rmventurex", "what is this website", "what is this company", "who are you"],
+    text: "RMVentureX is an independent AI-powered investment intelligence and equity research desk covering Indian and US-listed companies. It combines AI-assisted analysis with experienced human judgment, including research into the India–Canada investment corridor.",
+    href: "/#about", label: "Learn about RMVentureX" },
+  { terms: ["why should i subscribe", "why subscribe", "why would i subscribe", "why choose", "worth subscribing", "benefits of subscribing", "why should i join"],
+    text: "Subscribe if you want in-depth company research rather than just headlines. Depending on the plan, you get investment theses, sector themes, contrarian views, rating and conviction updates, archives, and possibly direct access to the desk. Research informs decisions but cannot guarantee returns.",
+    href: "/#pricing", label: "Compare subscription benefits" },
+  { terms: ["what is included", "what's included", "what do i get", "subscription benefits", "plan benefits", "what does subscription include", "what does the plan include"],
+    text: "Research includes deep-dives, themes, contrarian calls, rating history, priority emails, and archives. Desk+ adds a quarterly call, early access, and direct email follow-ups. IntelFox Global adds customized AI-powered intelligence, global coverage, and risk analysis.",
+    href: "/#pricing", label: "Compare plans" },
+  { terms: ["how much", "price", "pricing", "cost", "monthly fee", "plans available"],
+    text: "The listed plans are Research ($199/month), Desk+ ($399/month), and IntelFox Global ($999/month). Prices are in USD and billed quarterly. Check the pricing section for full details.",
+    href: "/#pricing", label: "View pricing" },
+  { terms: ["research", "reports", "notes", "stocks", "equities", "markets", "companies"],
+    text: "RMVentureX publishes research on Indian and US equities, company deep-dives, sector themes, and contrarian ideas, emphasizing the thesis, evidence, and risks.",
+    href: "/#research", label: "Explore research" },
+  { terms: ["india", "canada", "corridor", "cross-border"],
+    text: "The India–Canada corridor is a research theme focused on cross-border businesses, capital flows, and investment opportunities connected to both markets.",
+    href: "/#corridor", label: "Explore the corridor" },
+  { terms: ["approach", "method", "how it works", "process", "use ai", "ai-powered"],
+    text: "RMVentureX uses AI-assisted tools to review filings, market data, and macroeconomic information. Analysts then review and stress-test signals with independent judgment.",
+    href: "/#approach", label: "Our approach" },
+  { terms: ["subscribe", "sign up", "join", "register", "request access"],
+    text: "To get started, review the plans and submit the subscription inquiry form with your preferred plan and research interests.",
+    href: "/#subscribe", label: "Go to subscription form" },
+  { terms: ["contact", "email", "phone", "call", "linkedin", "youtube"],
+    text: "Reach RMVentureX at intelfox@rmventurex.com or +1 (647) 354-2369. The footer also links to LinkedIn and YouTube.",
+    href: "/#contact", label: "Contact the desk" },
+  { terms: ["about", "team", "founder", "experience"],
+    text: "The RMVentureX desk draws on over 25 years of institutional capital markets experience and combines independent research with AI-assisted analysis.",
+    href: "/#about", label: "About the desk" },
 ]
 
 function getReply(question: string): Reply {
-  const q = question.toLowerCase().trim()
-  if (/^(hi|hey|hello|good morning|good evening)[!. ]*$/.test(q)) {
-    return { text: "Hey! 🦊 I'm IntelFox, your RMVentureX website guide. Ask me where to find research, plans, or contact details." }
+  const q = question.toLowerCase().trim().replace(/[?!.,]/g, "")
+  if (/^(hi|hey|hello|good morning|good evening)$/.test(q)) {
+    return { text: "Hi! 🦊 I'm IntelFox. Ask me what RMVentureX does, why you might subscribe, what each plan includes, or how to explore the site." }
   }
-  const match = destinations.find((item) => item.words.some((word) => q.includes(word)))
+  const match = faq.find((item) => item.terms.some((term) => q.includes(term)))
   return match
     ? { text: match.text, href: match.href, label: match.label }
-    : { text: "I can help you navigate RMVentureX. Try asking about research, pricing, the India–Canada corridor, our approach, or contact details.", href: "/#research", label: "Browse research" }
+    : { text: "I can answer questions about RMVentureX, subscriptions, research, pricing, and the India–Canada corridor. Try one of the suggested questions!", href: "/#about", label: "Learn about RMVentureX" }
 }
 
 export function IntelFoxChat() {
