@@ -73,7 +73,7 @@ export function Pricing() {
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`flex flex-col gap-6 rounded-sm border p-7 ${
+              className={`premium-card flex flex-col gap-6 rounded-sm border p-7 ${
                 tier.featured ? "border-accent bg-card ring-1 ring-accent" : "border-border bg-card"
               }`}
             >
