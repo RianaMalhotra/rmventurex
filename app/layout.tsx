@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Source_Serif_4, Geist } from 'next/font/google'
 import './globals.css'
+import { IntelFoxChat } from '@/components/intelfox-chat'
 
 const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
@@ -54,6 +55,7 @@ export default function RootLayout({
     <html lang="en" className={`light bg-background ${geist.variable} ${sourceSerif.variable}`}>
       <body className="font-sans antialiased">
         {children}
+        <IntelFoxChat />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
