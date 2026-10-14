@@ -4,6 +4,7 @@ import { TickerStrip } from "@/components/ticker-strip"
 import { Hero } from "@/components/hero"
 import { ResearchTypes } from "@/components/research-types"
 import { FeaturedResearch } from "@/components/featured-research"
+import { LatestMarketTrends } from "@/components/latest-market-trends"
 import { Corridor } from "@/components/corridor"
 import { About } from "@/components/about"
 import { Pricing } from "@/components/pricing"
@@ -32,6 +33,7 @@ export default function Page() {
         <ScrollReveal>
           <FeaturedResearch />
         </ScrollReveal>
+        <LatestMarketTrends />
         <ScrollReveal>
           <Corridor />
         </ScrollReveal>
